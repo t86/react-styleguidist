@@ -115,6 +115,14 @@ export default function(
 		webpackConfig = merge(webpackConfig, {
 			entry: [require.resolve('react-dev-utils/webpackHotDevClient')],
 			plugins: [new webpack.HotModuleReplacementPlugin()],
+			module: {
+				rules: [
+					{
+						test: /rsg-components[\\/]Styled[\\/]/,
+						loader: path.resolve(__dirname, '../loaders/hmr-styles'),
+					},
+				],
+			},
 		});
 	}
 
