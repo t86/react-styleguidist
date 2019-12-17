@@ -20,7 +20,7 @@
           ".tsx",
           ".ts"
         ]
-      }
+      },
     },
     "react": {
       "version": "16.6",
@@ -42,6 +42,7 @@
     "import/first": ["error", "absolute-first"],
     "import/no-duplicates": "error",
     "import/extensions": ["error", "always", {
+      "mjs": "never",
       "js": "never",
       "tsx": "never",
       "ts": "never"
@@ -69,6 +70,15 @@
     {
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
+      },
+      "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+      },    
       "plugins": ["@typescript-eslint"],
       "extends": [
         "tamia/typescript-react"

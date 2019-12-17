@@ -140,6 +140,12 @@ export default function(
 		});
 	}
 
+	// Add styled aliases in the framework
+	alias['rsg-components/Styled/'] =
+		typeof config.styles === 'string'
+			? config.styles
+			: path.resolve(sourceDir, 'rsg-components/Styled/Styled');
+
 	// Add components folder alias at the end, so users can override our components
 	// to customize the style guide (their aliases should be before this one)
 	alias['rsg-components'] = path.resolve(sourceDir, 'rsg-components');
