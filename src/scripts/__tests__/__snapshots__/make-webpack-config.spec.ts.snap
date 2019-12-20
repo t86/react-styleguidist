@@ -4,6 +4,7 @@ exports[`should merge user webpack config 1`] = `
 Object {
   "foo": "bar",
   "rsg-components": "~/src/client/rsg-components",
+  "rsg-components/Styled/": "~/src/client/rsg-components/Styled/Styled",
   "rsg-customStyles": "~/src/client/styles/emptyStyles",
   "rsg-customTheme": "~/src/client/styles/emptyTheme",
 }
@@ -37,6 +38,7 @@ Array [
 exports[`should set aliases 1`] = `
 Object {
   "rsg-components": "~/src/client/rsg-components",
+  "rsg-components/Styled/": "~/src/client/rsg-components/Styled/Styled",
   "rsg-customStyles": "~/src/client/styles/emptyStyles",
   "rsg-customTheme": "~/src/client/styles/emptyTheme",
 }
@@ -46,6 +48,7 @@ exports[`should set aliases from moduleAliases option 1`] = `
 Object {
   "foo": "bar",
   "rsg-components": "~/src/client/rsg-components",
+  "rsg-components/Styled/": "~/src/client/rsg-components/Styled/Styled",
   "rsg-customStyles": "~/src/client/styles/emptyStyles",
   "rsg-customTheme": "~/src/client/styles/emptyTheme",
 }
