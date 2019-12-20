@@ -11,7 +11,8 @@ import * as theme from './theme';
 export default memoize(
 	(
 		styles: (t: Rsg.Theme) => Styles<string>,
-		config: Rsg.ProcessedStyleguidistConfig,
+		config: Pick<Rsg.ProcessedStyleguidistConfig, 'theme'> &
+			Pick<Rsg.ProcessedStyleguidistConfig, 'styles'>,
 		componentName: string
 	): StyleSheet<string> => {
 		const mergedTheme = merge<
