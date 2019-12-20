@@ -208,7 +208,8 @@
     ],
     "moduleNameMapper": {
       "rsg-customTheme": "<rootDir>/src/client/styles/emptyTheme",
-      "rsg-customStyles": "<rootDir>/src/client/styles/emptyStyles"
+      "rsg-customStyles": "<rootDir>/src/client/styles/emptyStyles",
+      "rsg-components/Styled/.*": "<rootDir>/src/client/rsg-components/Styled/Styled.tsx"
     },
     "testPathIgnorePatterns": [
       "<rootDir>/lib/",
