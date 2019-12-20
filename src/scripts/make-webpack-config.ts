@@ -118,7 +118,7 @@ export default function(
 			module: {
 				rules: [
 					{
-						test: /rsg-components[\\/]Styled[\\/]/,
+						test: /rsg-components[\\/]Styled\/index.js/,
 						loader: path.resolve(__dirname, '../loaders/hmr-styles'),
 					},
 				],
@@ -147,12 +147,6 @@ export default function(
 			alias[`rsg-components/${fullName}`] = filepath;
 		});
 	}
-
-	// Add styled aliases in the framework
-	alias['rsg-components/Styled/'] =
-		typeof config.styles === 'string'
-			? config.styles
-			: path.resolve(sourceDir, 'rsg-components/Styled/Styled');
 
 	// Add components folder alias at the end, so users can override our components
 	// to customize the style guide (their aliases should be before this one)

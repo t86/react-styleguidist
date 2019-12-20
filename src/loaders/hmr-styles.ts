@@ -6,6 +6,6 @@
  * @param source
  */
 export default function(this: Rsg.StyleguidistLoaderContext, source: string): string {
-	const componentName: string = this.request.split('/').pop() || '';
-	return source;
+	const componentName: string = this.request.split('?').pop() || '';
+	return `console.log('componentName', ${JSON.stringify(componentName)});${source}`;
 }

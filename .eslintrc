@@ -82,7 +82,11 @@
       "plugins": ["@typescript-eslint"],
       "extends": [
         "tamia/typescript-react"
-      ]
+      ],
+      "rules":{
+        "import/no-unresolved": ["off"],
+        "import/extensions": ["off"]
+      }
     }
   ]
 }
